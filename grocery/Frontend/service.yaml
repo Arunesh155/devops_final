@@ -1,0 +1,13 @@
+# service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-service
+spec:
+  type: NodePort
+  selector:
+    app: react-web-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
